@@ -5,14 +5,11 @@
     transform: translateX(-50%);
 }
 .nav-wrapper {
-    display: flex;
-    justify-content: space-between;
+    @extend %justify-between;
     align-items: baseline;
 }
 .logotype {
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 1.2;
+    @include font($fs: 30px, $fw: bold);
     color: #fff;
     animation-name: logo-appear;
     animation-duration: 2s;
@@ -32,7 +29,7 @@
     }
 }
 .navigation__link {
-    font-size: 14px;
+    @include font($fs: 14px);
     text-transform: uppercase;
     color: #fff;
     transition: 0.1s linear;
@@ -72,11 +69,13 @@
     background-color: transparent;
     border-style: none;
     
-    &:focus .navigation__option-icon,
-    &:hover .navigation__option-icon {
-        fill: $yellow;
-        transform: scale(2);
-    }
+    &:focus,
+    &:hover {
+        .navigation__option-icon {
+            fill: $yellow;
+            transform: scale(2);
+            }
+        }
 }
 .navigation__option-icon {
     width: 18px;

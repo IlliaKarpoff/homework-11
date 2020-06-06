@@ -1,51 +1,50 @@
 .team-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-.team-list__member-card {
+  @extend %justify-between;
+  
+  &__member-card {
     padding-bottom: 38px;
     
-    &:hover .team-list__member_photo, 
-    &:hover .team-list__member_overlay {
-      opacity: 1;
-      transform: translate(-10px, -10px);
+    &:hover {
+      .team-list__member_photo, 
+      .team-list__member_overlay {
+        opacity: 1;
+        transform: translate(-10px, -10px);
+      }
     }
-}
-.team-list__member {
-  position: relative;
-  margin-bottom: 30px;
-  &_overlay {
-    background-image: linear-gradient( 0deg, rgba(252,227,138,.8) 0%, rgba(243,129,129,.8) 100%);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    box-shadow: 10px 10px $lightgreen;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
-  &_photo, &_overlay {
-    transition: all .2s linear;
-  }
-  &_name {
-    font-size: 14px;
-    font-weight: bold;
-    color: $title-color;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 14px;
-  }
-  &_job {
-    font-size: 15px;
-    font-family: $p-font;
-    font-weight: 300;
-    font-style: italic;
-    color: $text-color;
-    text-align: center;
+  &__member {
+    position: relative;
+    margin-bottom: 30px;
+
+    &_overlay {
+      background-image: linear-gradient( 0deg, rgba(252,227,138,.8) 0%, rgba(243,129,129,.8) 100%);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-shadow: 10px 10px $lightgreen;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &_photo, &_overlay {
+      transition: all .2s linear;
+    }
+    &_name {
+      @include font($fs: 14px, $fw: bold);
+      color: $title-color;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    &_job {
+      @include font($ff: $p-font, $fs: 15px, $fw: 300);
+      font-style: italic;
+      color: $text-color;
+      text-align: center;
+    }
   }
 }
 
@@ -66,8 +65,10 @@
   &:hover {
     background-color: $red;
   }
-  &:hover .social-icon {
-    fill: #fff;
+  &:hover {
+    .social-icon {
+      fill: #fff;
+    }
   }
 }
 .social-icon {

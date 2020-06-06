@@ -1,10 +1,9 @@
 .footer {
-    font-size: 14px;
+    @include font($fs: 14px);
     color: $title-color;
 
     &__wrapper {
-      display: flex;
-      justify-content: space-between;
+      @extend %justify-between;
       min-height: 62px;
       align-items: center;
       border-top: 1px solid rgb(229, 229, 229);
@@ -25,17 +24,14 @@
       height: 40px;
       
       &::placeholder {
-        font-size: 15px;
-        font-family: $p-font;
-        font-weight: 300;
+        @include font($ff: $p-font, $fs: 15px, $fw: 300);
         font-style: italic;
         color: rgb(204, 204, 204);
       }
     }
     &__button {
-      font-size: 14px;
+      @include font($fs: 14px, $fw: bold);
       color: #fff;
-      font-weight: bold;
       text-transform: uppercase;
       text-align: center;
       background-color: $lightgreen;

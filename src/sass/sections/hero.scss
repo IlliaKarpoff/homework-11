@@ -15,16 +15,13 @@
     margin-bottom: 112px;
 }
 .hero__title_italic {
-    font-size: 72px;
-    font-family: "Kaushan Script";
-    font-weight: normal;
+    @include font($ff: $second-font, $fs: 72px, $fw: normal);
     color: #fff;
     margin-bottom: 44px;
     letter-spacing: 3px;
 }
 .hero__title_bold {
-    font-size: 150px;
-    font-weight: bold;
+    @include font($fs: 150px, $fw: bold);
     color: #fff;
     text-transform: uppercase;
 }
@@ -35,8 +32,7 @@
   width: 170px;
   height: 50px;
   padding: 14px;
-  font-size: 14px;
-  font-weight: bold;
+  @include font($fs: 14px, $fw: bold);
   color: #fff;
   text-transform: uppercase;
   text-align: center;

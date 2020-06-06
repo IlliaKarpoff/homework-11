@@ -1,8 +1,6 @@
 .service-list {
-    display:flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
+  @extend %justify-around;
+  
     &__item {
       flex: 0 0 380px;
       padding: 10px 10px 10px 80px;
@@ -32,16 +30,13 @@
       }
       &-title {
         margin-bottom: 20px;
-        font-size: 14px;
-        font-weight: bold;
+        @include font($fs: 14px, $fw: bold);
         color: $title-color;
         text-transform: uppercase;
       }
       &-description {
-        font-size: 15px;
-        font-family: $p-font;
+        @include font($ff: $p-font, $fs: 15px, $lh: 1.6);
         color: $text-color;
-        line-height: 1.6;
       }
     }
   }
