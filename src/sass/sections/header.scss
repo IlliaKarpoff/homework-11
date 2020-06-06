@@ -1,0 +1,77 @@
+.header {
+    padding: 40px 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.logotype {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.2;
+}
+.navigation {
+    display: flex;
+    align-items: baseline;
+}
+.navigation__menu {
+    display: flex;
+    margin-right: 56px;
+}
+.navigation__item:not(:last-child) {
+    margin-right: 56px;
+}
+.navigation__link {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.1s linear;
+    position: relative;
+}
+.navigation__link:focus,
+.navigation__link:hover {
+    color: $yellow;
+}
+.navigation__link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: $yellow;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.2s linear;
+}
+.navigation__link:focus::after,
+.navigation__link:hover::after {
+    width: 100%;
+}
+.navigation__optional-menu {
+    display: flex;
+}
+.navigation__option-item:first-child {
+    margin-right: 42px;
+}
+.navigation__option {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+    transition: 0.1s linear;
+    cursor: pointer;
+}
+.navigation__option:focus,
+.navigation__option:hover {
+    fill: $yellow;
+    transform: scale(1.2);
+}

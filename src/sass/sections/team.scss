@@ -1,0 +1,74 @@
+.team-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .team-list__member-card {
+      padding-bottom: 38px;
+  }
+  .team-list__member {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .team-list__member_overlay {
+    background-image: linear-gradient( 0deg, rgba(252,227,138,.8) 0%, rgba(243,129,129,.8) 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px $lightgreen;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .team-list__member_photo, .team-list__member_overlay {
+  transition: all .2s linear;
+  }
+  .team-list__member-card:hover .team-list__member_photo, 
+  .team-list__member-card:hover .team-list__member_overlay {
+    opacity: 1;
+    transform: translate(-10px, -10px);
+  }
+  .social-button {
+    background-color: $yellow;
+    width: 56px;
+    height: 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color .2s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-button:not(:last-child) {
+      border-right: 1px solid $red;
+  }
+  .social-button:hover {
+    background-color: $red;
+  }
+  .social-button:hover .social-icon {
+      fill: #fff;
+  }
+  .social-icon {
+      width: 26px;
+      height: 26px;
+      fill: $red;
+  }
+  .team-list__member_name {
+    font-size: 14px;
+    font-weight: bold;
+    color: $title-color;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  .team-list__member_job {
+    font-size: 15px;
+    font-family: $p-font;
+    font-weight: 300;
+    font-style: italic;
+    color: $text-color;
+    text-align: center;
+  }
