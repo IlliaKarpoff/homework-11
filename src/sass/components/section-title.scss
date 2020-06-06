@@ -16,15 +16,12 @@
 .section__title {
   &_italic {
   display: block;
-  font-size: 24px;
-  font-family: $second-font;
+  @include font($ff: $second-font, $fs: 24px);
   margin-bottom: 22px;
   }
   &_bold {
   display: block;
-  font-size: 30px;
-  font-family: $main-font;
-  font-weight: bold;
+  @include font($fs: 30px, $fw: bold);
   text-transform: uppercase;
   }
 }

@@ -2,10 +2,8 @@
     display: block;
     margin: 0 auto;
     width: 960px;
-    font-size: 15px;
-    font-family: $p-font;
+    @include font($ff: $p-font, $fs: 15px, $lh: 1.6);
     color: $text-color;
-    line-height: 1.6;
     text-align: center;
     margin-bottom: 90px;
   }
