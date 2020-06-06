@@ -1,0 +1,10 @@
+%justify-around {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+%justify-between {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
