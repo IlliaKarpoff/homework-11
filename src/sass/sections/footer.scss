@@ -1,48 +1,53 @@
 .footer {
     font-size: 14px;
     color: $title-color;
-  }
-  .footer__wrapper {
-    display: flex;
-    justify-content: space-between;
-    min-height: 62px;
-    align-items: center;
-    border-top: 1px solid rgb(229, 229, 229);
-  }
-  .footer__link {
-    color: $red;
-  }
-  
-  .contact-form {
+
+    &__wrapper {
       display: flex;
-  }
-  .contact-form__button {
-    font-size: 14px;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    background-color: $lightgreen;
-    width: 150px;
-    height: 40px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-  }
-  .contact-form__button:hover {
-      background-color: $yellow;
-  }
-  .contact-form__input::placeholder {
-    font-size: 15px;
-    font-family: $p-font;
-    font-weight: 300;
-    font-style: italic;
-    color: rgb(204, 204, 204);
-  }
-  .contact-form__input {
-    outline: none;
-    border: 1px solid rgb(229, 229, 229);
-    padding-left: 10px;
-    width: 230px;
-    height: 40px;
-  }
+      justify-content: space-between;
+      min-height: 62px;
+      align-items: center;
+      border-top: 1px solid rgb(229, 229, 229);
+    }
+    &__link {
+      color: $red;
+    }
+}
+
+.contact-form {
+    display: flex;
+    
+    &__input {
+      outline: none;
+      border: 1px solid rgb(229, 229, 229);
+      padding-left: 10px;
+      width: 230px;
+      height: 40px;
+      
+      &::placeholder {
+        font-size: 15px;
+        font-family: $p-font;
+        font-weight: 300;
+        font-style: italic;
+        color: rgb(204, 204, 204);
+      }
+    }
+    &__button {
+      font-size: 14px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: $lightgreen;
+      width: 150px;
+      height: 40px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      
+      &:focus,
+      &:hover {
+        background-color: $yellow;
+      }
+    }
+}

@@ -2,26 +2,29 @@
     color: $title-color;
     text-align: center;
     margin-bottom: 64px;
+
+    &::after {
+      content:'';
+      display: block;
+      margin: 0 auto;
+      margin-top: 40px;
+      width: 60px;
+      height: 4px;
+      background-color: $red;
+    }
+}
+.section__title {
+  &_italic {
+  display: block;
+  font-size: 24px;
+  font-family: $second-font;
+  margin-bottom: 22px;
   }
-  .section__title_italic {
-    display: block;
-    font-size: 24px;
-    font-family: $second-font;
-    margin-bottom: 22px;
+  &_bold {
+  display: block;
+  font-size: 30px;
+  font-family: $main-font;
+  font-weight: bold;
+  text-transform: uppercase;
   }
-  .section__title_bold {
-    display: block;
-    font-size: 30px;
-    font-family: $main-font;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  .section__title-box::after {
-    content:'';
-    display: block;
-    margin: 0 auto;
-    margin-top: 40px;
-    width: 60px;
-    height: 4px;
-    background-color: $red;
-  }
+}

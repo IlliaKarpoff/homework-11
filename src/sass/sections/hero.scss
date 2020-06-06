@@ -3,11 +3,10 @@
     background-size: cover;
     padding-top: 248px;
     padding-bottom: 230px;
-}
-@media (min-resolution: 192dpi) {
-    .hero {
+    
+    @media (min-resolution: 192dpi) {
         background-image: linear-gradient( 0deg, rgba(252,227,138,.9) 0%, rgba(243,129,129,.9) 100%), url(../img/bg@2x.jpg);
-    }
+        }
 }
 .hero__title-box {
     width: 1100px;
@@ -42,8 +41,10 @@
   text-transform: uppercase;
   text-align: center;
   transition: all 0.2s linear;
-}
-.hero__button:hover {
-    color: $red;
-    border-color: $red;
+
+  &:focus,
+  &:hover {
+      color: $red;
+      border-color: $red;
+    }
 }
