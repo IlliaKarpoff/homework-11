@@ -21,7 +21,7 @@ npm install
 
 И запустить режим разработки.
 
-<!-- ```shell -->
+```shell
 npm start
 ```
 
